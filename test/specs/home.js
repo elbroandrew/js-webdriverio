@@ -32,7 +32,7 @@ describe('Home', () => {
     await browser.url('https://practice.automationbro.com');
     const headingElem = await $('.elementor-widget-container h1');
     const headingText = await headingElem.getText();
-    await expect(headingText).toEqual("Think different. Make different.");
+    await expect(headingElem).toHaveText("Think different. Make different.");
   });
 
 });

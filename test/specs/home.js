@@ -13,5 +13,12 @@ describe('Home', () => {
     await expect(browser).toHaveUrl('https://practice.automationbro.com/about/');
   });
 
+  it('Click Get started button and assert url contains text', async () => {
+    
+    await browser.url('https://practice.automationbro.com');
+    await $('#get-started').click();
+    await expect(browser).toHaveUrlContaining("get-started");
+  });
+
 });
 
